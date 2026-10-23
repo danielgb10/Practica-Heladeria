@@ -5,7 +5,6 @@ public class HeladoControlador {
     private HeladoModelo modelo;
 
     public HeladoControlador(Ventana vista, HeladoModelo modelo) {
-        this.vista = vista;
-        this.modelo = modelo;
+
     }
 }

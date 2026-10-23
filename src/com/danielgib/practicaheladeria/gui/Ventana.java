@@ -11,16 +11,11 @@ public class Ventana {
     private JTextField textField1;
     private JRadioButton conAzucarRadioButton;
     private JRadioButton sinAzucarRadioButton;
+    private JButton nuevoHeladoButton;
+    private JButton exportarButton;
+    private JButton importarButton;
 
     public JFrame frame;
     public DefaultListModel<Helado> dlmHelado;
-
-    public Ventana() {
-        frame = new JFrame("HeladoMVC");
-        frame.setContentPane(panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
-    }
 
 }
