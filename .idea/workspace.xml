@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b09e2ff6-5c9b-437d-8fa4-5df2f1d91efd" name="Default Changelist" comment="" />
+    <list default="true" id="b09e2ff6-5c9b-437d-8fa4-5df2f1d91efd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/base/Helado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/base/Helado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/base/HeladoCono.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/base/HeladoCono.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/base/HeladoTarrina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/base/HeladoTarrina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoControlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,12 +25,28 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="3L2Zp5NvOLX4hDmKrMMKBV31MsT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="324" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.danielgib.practicaheladeria.base" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -45,11 +71,31 @@
       <option name="presentableId" value="Default" />
       <updated>1792654303141</updated>
       <workItem from="1792654305946" duration="191000" />
-      <workItem from="1792654519849" duration="255000" />
+      <workItem from="1792654519849" duration="983000" />
+      <workItem from="1792657477074" duration="1273000" />
+      <workItem from="1792660826157" duration="1350000" />
+      <workItem from="1792666913056" duration="495000" />
+      <workItem from="1792681982550" duration="806000" />
+      <workItem from="1792693613602" duration="933000" />
+      <workItem from="1792738567680" duration="615000" />
+      <workItem from="1792747730614" duration="775000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

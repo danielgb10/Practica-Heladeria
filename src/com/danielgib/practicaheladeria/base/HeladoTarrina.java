@@ -1,4 +1,5 @@
 package com.danielgib.practicaheladeria.base;
 
-public class HeladoTarrina {
+public class HeladoTarrina extends Helado {
+
 }
