@@ -15,7 +15,6 @@ public class Ventana {
     private JButton exportarButton;
     private JButton importarButton;
 
-    public JFrame frame;
-    public DefaultListModel<Helado> dlmHelado;
+
 
 }

@@ -12,28 +12,18 @@ public class Helado {
     private int stock;
     private boolean sinAzucar;
 
-    //constructores
     public Helado() {
 
     }
 
-    public Helado(String sabor, String tipo, String tamano, LocalDate fechaCompra, double precio, int stock, boolean sinAzucar) {
-        this.sabor = sabor;
+    public Helado(String tipo, String tamano, String sabor, LocalDate fechaCompra, double precio, int stock, boolean sinAzucar) {
         this.tipo = tipo;
         this.tamano = tamano;
+        this.sabor = sabor;
         this.fechaCompra = fechaCompra;
         this.precio = precio;
         this.stock = stock;
         this.sinAzucar = sinAzucar;
-    }
-
-    //getters y setters
-    public String getSabor() {
-        return sabor;
-    }
-
-    public void setSabor(String sabor) {
-        this.sabor = sabor;
     }
 
     public String getTipo() {
@@ -50,6 +40,14 @@ public class Helado {
 
     public void setTamano(String tamano) {
         this.tamano = tamano;
+    }
+
+    public String getSabor() {
+        return sabor;
+    }
+
+    public void setSabor(String sabor) {
+        this.sabor = sabor;
     }
 
     public LocalDate getFechaCompra() {
