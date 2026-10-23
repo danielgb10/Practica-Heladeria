@@ -71,6 +71,4 @@ public abstract class Helado {
     public void setSinAzucar(boolean sinAzucar) {
         this.sinAzucar = sinAzucar;
     }
-
-
 }
