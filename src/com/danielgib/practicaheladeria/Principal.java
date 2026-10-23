@@ -1,6 +1,12 @@
 package com.danielgib.practicaheladeria;
 
 
-public class Principal {
+import com.danielgib.practicaheladeria.gui.HeladoControlador;
+import com.danielgib.practicaheladeria.gui.HeladoModelo;
+import com.danielgib.practicaheladeria.gui.Ventana;
 
+public class Principal {
+    Ventana vista = new Ventana();
+    HeladoModelo modelo = new HeladoModelo();
+    HeladoControlador controlador = new HeladoControlador(vista, modelo);
 }

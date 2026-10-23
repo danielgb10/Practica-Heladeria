@@ -2,7 +2,7 @@ package com.danielgib.practicaheladeria.base;
 
 import java.time.LocalDate;
 
-public class Helado {
+public abstract class Helado {
     //atributos
     private String tipo;
     private String tamano; //enum

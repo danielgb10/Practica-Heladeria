@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b09e2ff6-5c9b-437d-8fa4-5df2f1d91efd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/Principal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/base/Helado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/base/Helado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +72,8 @@
       <workItem from="1792681982550" duration="806000" />
       <workItem from="1792693613602" duration="933000" />
       <workItem from="1792738567680" duration="615000" />
-      <workItem from="1792747730614" duration="2258000" />
+      <workItem from="1792747730614" duration="2415000" />
+      <workItem from="1792760952888" duration="404000" />
     </task>
     <servers />
   </component>
