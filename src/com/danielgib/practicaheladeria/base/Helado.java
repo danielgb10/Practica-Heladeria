@@ -5,7 +5,6 @@ import java.time.LocalDate;
 public abstract class Helado {
     //atributos
     private String tipo;
-    private String tamano; //enum
     private String sabor; //enum
     private LocalDate fechaCompra;
     private double precio;
@@ -18,7 +17,6 @@ public abstract class Helado {
 
     public Helado(String tipo, String tamano, String sabor, LocalDate fechaCompra, double precio, int stock, boolean sinAzucar) {
         this.tipo = tipo;
-        this.tamano = tamano;
         this.sabor = sabor;
         this.fechaCompra = fechaCompra;
         this.precio = precio;
@@ -32,14 +30,6 @@ public abstract class Helado {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
-    }
-
-    public String getTamano() {
-        return tamano;
-    }
-
-    public void setTamano(String tamano) {
-        this.tamano = tamano;
     }
 
     public String getSabor() {
