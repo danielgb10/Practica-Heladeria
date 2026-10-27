@@ -3,27 +3,27 @@ package com.danielgib.practicaheladeria.base;
 import java.time.LocalDate;
 
 public class HeladoCono extends Helado{
-    private int numBolas;
+    public String tipoCono; //chocolate, barquillo...
 
-    public HeladoCono() {
-
+    public HeladoCono(String sabor, String toppings, LocalDate fechaCompra, double precio, String s, boolean sinAzucar, int numBolas, String tipoCono) {
+        super();
     }
 
-    public HeladoCono(String tipo, String tamano, String sabor, LocalDate fechaCompra, double precio, int stock, boolean sinAzucar, int numBolas) {
-        super(tipo, tamano, sabor, fechaCompra, precio, stock, sinAzucar);
-        this.numBolas = numBolas;
+    public HeladoCono(String sabor, String toppings, LocalDate fechaCompra, double precio, int stock, boolean sinAzucar, int numBolas, String tipoCono) {
+        super(sabor, toppings, fechaCompra, precio, stock, sinAzucar, numBolas);
+        this.tipoCono = tipoCono;
     }
 
-    public int getNumBolas() {
-        return numBolas;
+    public String getTipoCono() {
+        return tipoCono;
     }
 
-    public void setNumBolas(int numBolas) {
-        this.numBolas = numBolas;
+    public void setTipoCono(String tipoCono) {
+        this.tipoCono = tipoCono;
     }
 
     @Override
     public String toString() {
-        return "Numero Bolas: " + numBolas;
+        return "TipoCono: " + tipoCono;
     }
 }

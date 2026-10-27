@@ -4,32 +4,26 @@ import java.time.LocalDate;
 
 public abstract class Helado {
     //atributos
-    private String tipo;
-    private String sabor; //enum
+    private String sabor;
+    private String toppings;
     private LocalDate fechaCompra;
     private double precio;
     private int stock;
     private boolean sinAzucar;
+    private int numBolas;
 
     public Helado() {
 
     }
 
-    public Helado(String tipo, String tamano, String sabor, LocalDate fechaCompra, double precio, int stock, boolean sinAzucar) {
-        this.tipo = tipo;
+    public Helado(String sabor, String toppings, LocalDate fechaCompra, double precio, int stock, boolean sinAzucar, int numBolas) {
         this.sabor = sabor;
+        this.toppings = toppings;
         this.fechaCompra = fechaCompra;
         this.precio = precio;
         this.stock = stock;
         this.sinAzucar = sinAzucar;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+        this.numBolas = numBolas;
     }
 
     public String getSabor() {
@@ -38,6 +32,14 @@ public abstract class Helado {
 
     public void setSabor(String sabor) {
         this.sabor = sabor;
+    }
+
+    public String getToppings() {
+        return toppings;
+    }
+
+    public void setToppings(String toppings) {
+        this.toppings = toppings;
     }
 
     public LocalDate getFechaCompra() {
@@ -70,5 +72,13 @@ public abstract class Helado {
 
     public void setSinAzucar(boolean sinAzucar) {
         this.sinAzucar = sinAzucar;
+    }
+
+    public int getNumBolas() {
+        return numBolas;
+    }
+
+    public void setNumBolas(int numBolas) {
+        this.numBolas = numBolas;
     }
 }

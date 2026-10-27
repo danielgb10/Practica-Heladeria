@@ -5,13 +5,13 @@ import java.time.LocalDate;
 public class HeladoTarrina extends Helado {
     public String tamano;
 
-    public HeladoTarrina() {
-
+    public HeladoTarrina(String sabor, String toppings, LocalDate fechaCompra, double precio, String s, boolean sinAzucar, int numBolas, String tamano) {
+        super();
     }
 
-    public HeladoTarrina(String tipo, String tamano, String sabor, LocalDate fechaCompra, double precio, int stock, boolean sinAzucar, String tamano1) {
-        super(tipo, tamano, sabor, fechaCompra, precio, stock, sinAzucar);
-        this.tamano = tamano1;
+    public HeladoTarrina(String sabor, String toppings, LocalDate fechaCompra, double precio, int stock, boolean sinAzucar, int numBolas, String tamano) {
+        super(sabor, toppings, fechaCompra, precio, stock, sinAzucar, numBolas);
+        this.tamano = tamano;
     }
 
     public String getTamano() {
@@ -24,6 +24,6 @@ public class HeladoTarrina extends Helado {
 
     @Override
     public String toString() {
-        return "Tamaño: " + tamano;
+        return "Tamaño: " + tamano ;
     }
 }
