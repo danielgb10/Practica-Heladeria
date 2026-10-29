@@ -3,10 +3,8 @@ package com.danielgib.practicaheladeria.gui;
 import com.danielgib.practicaheladeria.base.Helado;
 import com.danielgib.practicaheladeria.base.HeladoCono;
 import com.danielgib.practicaheladeria.base.HeladoTarrina;
-import org.w3c.dom.DOMImplementation;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Text;
+import org.w3c.dom.*;
+import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -15,6 +13,7 @@ import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -111,6 +110,44 @@ public class HeladoModelo {
     }
 
     //importar
+    public void importarXML(File fichero) throws ParserConfigurationException, IOException, SAXException {
+        listaHelados = new ArrayList<>();
+        HeladoTarrina nuevoHeladoTarrina= null;
+        HeladoCono nuevoHeladoCono = null;
 
-}
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        Document documento = builder.parse(fichero);
+
+        //recorrer los archivos
+        NodeList listaElementos = documento.getElementsByTagName("");
+        for (int i=0; i<listaElementos.getLength(); i++) {
+            Element nodoHelado = (Element) listaElementos.item(i);
+
+            if(nodoHelado.getTagName().equals("HeladoTarrina")) {
+                nuevoHeladoTarrina = new HeladoTarrina();
+                nuevoHeladoTarrina.setTamano(nodoHelado.getChildNodes().item(0).getTextContent());
+                nuevoHeladoTarrina.setSabor(nodoHelado.getChildNodes().item(1).getTextContent());
+                nuevoHeladoTarrina.setNumBolas(Integer.parseInt(nodoHelado.getChildNodes().item(2).getTextContent()));
+                nuevoHeladoTarrina.setToppings(nodoHelado.getChildNodes().item(3).getTextContent());
+                nuevoHeladoTarrina.setFechaCompra(LocalDate.parse(nodoHelado.getChildNodes().item(4).getTextContent()));
+                nuevoHeladoTarrina.setPrecio(Double.parseDouble(nodoHelado.getChildNodes().item(5).getTextContent()));
+                nuevoHeladoTarrina.setSinAzucar(Boolean.parseBoolean(nodoHelado.getChildNodes().item(6).getTextContent()));
+                listaHelados.add(nuevoHeladoTarrina);
+
+            } else if(nodoHelado.getTagName().equals("HeladoCono")) {
+                nuevoHeladoCono = new HeladoCono();
+                nuevoHeladoCono.setTipoCono(nodoHelado.getChildNodes().item(0).getTextContent());
+                nuevoHeladoCono.setSabor(nodoHelado.getChildNodes().item(1).getTextContent());
+                nuevoHeladoCono.setNumBolas(Integer.parseInt(nodoHelado.getChildNodes().item(2).getTextContent()));
+                nuevoHeladoCono.setToppings(nodoHelado.getChildNodes().item(3).getTextContent());
+                nuevoHeladoCono.setFechaCompra(LocalDate.parse(nodoHelado.getChildNodes().item(4).getTextContent()));
+                nuevoHeladoCono.setPrecio(Double.parseDouble(nodoHelado.getChildNodes().item(5).getTextContent()));
+                nuevoHeladoCono.setSinAzucar(Boolean.parseBoolean(nodoHelado.getChildNodes().item(6).getTextContent()));
+                listaHelados.add(nuevoHeladoCono);
+            }
+        }
+    }
+    }
+
 

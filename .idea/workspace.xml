@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="b09e2ff6-5c9b-437d-8fa4-5df2f1d91efd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/base/Helado.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/base/Helado.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/base/HeladoCono.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/base/HeladoCono.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/base/HeladoTarrina.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/base/HeladoTarrina.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/gui/HeladoModelo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/gui/HeladoModelo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/gui/Ventana.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/gui/Ventana.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoModelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoModelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.form" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,9 +31,10 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="324" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="57" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -107,7 +114,8 @@
       <workItem from="1793125471414" duration="7582000" />
       <workItem from="1793133180680" duration="68000" />
       <workItem from="1793175687842" duration="5049000" />
-      <workItem from="1793259465865" duration="5217000" />
+      <workItem from="1793259465865" duration="6247000" />
+      <workItem from="1793294618892" duration="2017000" />
     </task>
     <servers />
   </component>
