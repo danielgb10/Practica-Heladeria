@@ -11,7 +11,7 @@ public class Ventana {
     public JButton exportarButton;
     public JButton importarButton;
     public JList list1;
-    public DatePicker fechaCompra;
+    public DatePicker fechaCompraDatePicker;
     public JTextField toppingsTxt;
     public JSpinner numBolasInt;
     public JTextField precioTxt;
@@ -19,9 +19,9 @@ public class Ventana {
     public JRadioButton tarrinaRadioButton;
     public JRadioButton conAzucarRadioButton;
     public JRadioButton sinAzucarRadioButton;
-    public JComboBox saborTxt;
+    public JComboBox saborBox;
     public JTextArea textArea1;
-    public JComboBox comboBox1;
+    public JComboBox tamanoBox;
 
     public JFrame frame;
     public  DefaultListModel<Helado> dlmHelado;

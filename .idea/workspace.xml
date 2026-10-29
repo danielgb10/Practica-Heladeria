@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b09e2ff6-5c9b-437d-8fa4-5df2f1d91efd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/base/Helado.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/base/Helado.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/base/HeladoCono.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/base/HeladoCono.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/base/HeladoTarrina.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/base/HeladoTarrina.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/gui/HeladoModelo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/gui/HeladoModelo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/gui/Ventana.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/gui/Ventana.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoControlador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoModelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoModelo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +28,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="57" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="219" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
@@ -48,11 +45,11 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\danie\Documents\2º DAM\Acceso a Datos\Práctica Heladería\libs" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.danielgib.practicaheladeria.base" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\danie\Documents\2º DAM\Acceso a Datos\Práctica Heladería\libs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -115,7 +112,7 @@
       <workItem from="1793133180680" duration="68000" />
       <workItem from="1793175687842" duration="5049000" />
       <workItem from="1793259465865" duration="6247000" />
-      <workItem from="1793294618892" duration="2017000" />
+      <workItem from="1793294618892" duration="5879000" />
     </task>
     <servers />
   </component>

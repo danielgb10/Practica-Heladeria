@@ -24,6 +24,10 @@ public class HeladoModelo {
         this.listaHelados = new ArrayList<>();
     }
 
+    public ArrayList<Helado> obtenerHelados() {
+        return listaHelados;
+    }
+
     public void altaHeladoCono(String sabor, String toppings, LocalDate fechaCompra, double precio, boolean sinAzucar, int numBolas, String tipoCono) {
         HeladoCono nuevoHeladoCono = new HeladoCono(sabor, toppings, fechaCompra, precio, sinAzucar, numBolas, tipoCono);
         listaHelados.add(nuevoHeladoCono);

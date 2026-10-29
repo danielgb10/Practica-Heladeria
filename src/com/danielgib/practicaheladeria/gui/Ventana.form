@@ -80,7 +80,7 @@
           <text value="Exportar"/>
         </properties>
       </component>
-      <component id="84ee2" class="com.github.lgooddatepicker.components.DatePicker" binding="fechaCompra">
+      <component id="84ee2" class="com.github.lgooddatepicker.components.DatePicker" binding="fechaCompraDatePicker">
         <constraints>
           <grid row="10" column="2" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
@@ -191,7 +191,7 @@
           <text value="Sin Azucar"/>
         </properties>
       </component>
-      <component id="d3540" class="javax.swing.JComboBox" binding="saborTxt">
+      <component id="d3540" class="javax.swing.JComboBox" binding="saborBox">
         <constraints>
           <grid row="4" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
           <forms/>
@@ -235,7 +235,7 @@
           <text value="Tamaño"/>
         </properties>
       </component>
-      <component id="c249e" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
+      <component id="c249e" class="javax.swing.JComboBox" binding="tamanoBox">
         <constraints>
           <grid row="2" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
           <forms/>
