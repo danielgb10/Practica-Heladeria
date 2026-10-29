@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b09e2ff6-5c9b-437d-8fa4-5df2f1d91efd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/Principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/base/Helado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/base/Helado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/base/HeladoCono.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/base/HeladoCono.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/base/HeladoTarrina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/base/HeladoTarrina.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoModelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoModelo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +107,7 @@
       <workItem from="1793125471414" duration="7582000" />
       <workItem from="1793133180680" duration="68000" />
       <workItem from="1793175687842" duration="5049000" />
-      <workItem from="1793259465865" duration="4756000" />
+      <workItem from="1793259465865" duration="5217000" />
     </task>
     <servers />
   </component>
