@@ -13,110 +13,58 @@
     <rowspec value="top:4dlu:noGrow"/>
     <rowspec value="center:40px:noGrow"/>
     <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:40px:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:40px:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
     <rowspec value="center:max(d;4px):noGrow"/>
     <rowspec value="top:5dlu:noGrow"/>
     <rowspec value="center:32px:noGrow"/>
     <rowspec value="top:5dlu:noGrow"/>
     <rowspec value="center:28px:noGrow"/>
     <rowspec value="top:4dlu:noGrow"/>
-    <rowspec value="center:85px:grow"/>
+    <rowspec value="center:104px:noGrow"/>
     <colspec value="fill:106px:noGrow"/>
     <colspec value="left:4dlu:noGrow"/>
     <colspec value="fill:93px:noGrow"/>
     <colspec value="left:9dlu:noGrow"/>
     <colspec value="fill:124px:noGrow"/>
     <constraints>
-      <xy x="20" y="20" width="353" height="479"/>
+      <xy x="20" y="20" width="353" height="618"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
-      <component id="6fe92" class="javax.swing.JRadioButton" binding="conoRadioButton" default-binding="true">
-        <constraints>
-          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <forms/>
-        </constraints>
-        <properties>
-          <text value="Cono"/>
-        </properties>
-      </component>
-      <component id="fb3a6" class="javax.swing.JRadioButton" binding="tarrinaRadioButton" default-binding="true">
-        <constraints>
-          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <forms/>
-        </constraints>
-        <properties>
-          <text value="Tarrina"/>
-        </properties>
-      </component>
       <component id="ca208" class="javax.swing.JLabel">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
           <text value="Sabor"/>
         </properties>
       </component>
-      <component id="32393" class="javax.swing.JTextField" binding="saborTxt">
-        <constraints>
-          <grid row="2" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-          <forms defaultalign-horz="false"/>
-        </constraints>
-        <properties>
-          <text value=""/>
-        </properties>
-      </component>
       <component id="201b1" class="javax.swing.JLabel">
         <constraints>
-          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
           <text value="Fecha Compra"/>
         </properties>
       </component>
-      <component id="5cf08" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <forms/>
-        </constraints>
-        <properties>
-          <text value="Stock"/>
-        </properties>
-      </component>
       <component id="a4188" class="javax.swing.JLabel">
         <constraints>
-          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="14" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
-          <text value="Elige"/>
-        </properties>
-      </component>
-      <component id="3f0ee" class="javax.swing.JRadioButton" binding="conAzucarRadioButton" default-binding="true">
-        <constraints>
-          <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <forms/>
-        </constraints>
-        <properties>
-          <text value="Con Azucar"/>
-        </properties>
-      </component>
-      <component id="4fbe5" class="javax.swing.JRadioButton" binding="sinAzucarRadioButton" default-binding="true">
-        <constraints>
-          <grid row="10" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <forms/>
-        </constraints>
-        <properties>
-          <text value="Sin Azucar"/>
+          <text value="Azucar"/>
         </properties>
       </component>
       <component id="71320" class="javax.swing.JButton" binding="nuevoHeladoButton" default-binding="true">
         <constraints>
-          <grid row="12" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="16" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
@@ -125,63 +73,32 @@
       </component>
       <component id="e3d1" class="javax.swing.JButton" binding="exportarButton" default-binding="true">
         <constraints>
-          <grid row="14" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="18" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
           <text value="Exportar"/>
         </properties>
       </component>
-      <component id="10c9e" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <forms/>
-        </constraints>
-        <properties>
-          <text value="Tipo Helado"/>
-        </properties>
-      </component>
       <component id="84ee2" class="com.github.lgooddatepicker.components.DatePicker" binding="fechaCompra">
         <constraints>
-          <grid row="4" column="2" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="10" column="2" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties/>
       </component>
       <component id="594f2" class="javax.swing.JLabel">
         <constraints>
-          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
           <text value="Precio"/>
         </properties>
       </component>
-      <component id="9e778" class="javax.swing.JTextField" binding="precioTxt">
-        <constraints>
-          <grid row="6" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-          <forms defaultalign-horz="false"/>
-        </constraints>
-        <properties>
-          <text value=""/>
-        </properties>
-      </component>
-      <component id="5d762" class="javax.swing.JTextField" binding="stockTxt">
-        <constraints>
-          <grid row="8" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-          <forms defaultalign-horz="false"/>
-        </constraints>
-        <properties>
-          <text value=""/>
-        </properties>
-      </component>
       <scrollpane id="d13fb">
         <constraints>
-          <grid row="12" column="2" row-span="5" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="16" column="2" row-span="5" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
           <forms defaultalign-horz="false" defaultalign-vert="false"/>
         </constraints>
         <properties/>
@@ -195,21 +112,160 @@
       </scrollpane>
       <component id="f8521" class="javax.swing.JButton" binding="importarButton" default-binding="true">
         <constraints>
-          <grid row="16" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="20" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
           <text value="Importar"/>
         </properties>
       </component>
-      <component id="eeb27" class="javax.swing.JTextArea" binding="valoracionText">
+      <component id="a74f" class="javax.swing.JLabel">
         <constraints>
-          <grid row="18" column="0" row-span="1" col-span="5" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Numero Bolas"/>
+        </properties>
+      </component>
+      <component id="3779a" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Toppings"/>
+        </properties>
+      </component>
+      <component id="2cbad" class="javax.swing.JTextField" binding="toppingsTxt">
+        <constraints>
+          <grid row="8" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="13a96" class="javax.swing.JSpinner" binding="numBolasInt">
+        <constraints>
+          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="3d76a" class="javax.swing.JTextField" binding="precioTxt">
+        <constraints>
+          <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="10c9e" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <text value="Tipo Helado"/>
+        </properties>
+      </component>
+      <component id="3367c" class="javax.swing.JRadioButton" binding="conAzucarRadioButton" default-binding="true">
+        <constraints>
+          <grid row="14" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Con Azucar"/>
+        </properties>
+      </component>
+      <component id="3b8c9" class="javax.swing.JRadioButton" binding="sinAzucarRadioButton" default-binding="true">
+        <constraints>
+          <grid row="14" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Sin Azucar"/>
+        </properties>
+      </component>
+      <component id="d3540" class="javax.swing.JComboBox" binding="saborTxt">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="Elige un sabor"/>
+            <item value="Chocolate"/>
+            <item value="Fresa"/>
+            <item value="Vainilla"/>
+            <item value="Limón"/>
+            <item value="Pistacho"/>
+          </model>
+          <toolTipText value=""/>
+        </properties>
+      </component>
+      <component id="d6270" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="22" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Observaciones"/>
+        </properties>
+      </component>
+      <component id="d37da" class="javax.swing.JTextArea" binding="textArea1" default-binding="true">
+        <constraints>
+          <grid row="22" column="2" row-span="1" col-span="3" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="50"/>
           </grid>
           <forms defaultalign-horz="false" defaultalign-vert="false"/>
         </constraints>
         <properties/>
+      </component>
+      <component id="b97c" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Tamaño"/>
+        </properties>
+      </component>
+      <component id="c249e" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="Elige un tamaño"/>
+            <item value="Grande"/>
+            <item value="Mediano"/>
+            <item value="Pequeño"/>
+          </model>
+        </properties>
+      </component>
+      <component id="98754" class="javax.swing.JRadioButton" binding="tarrinaRadioButton" default-binding="true">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Tarrina"/>
+        </properties>
+      </component>
+      <component id="a4826" class="javax.swing.JRadioButton" binding="conoRadioButton" default-binding="true">
+        <constraints>
+          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Cono"/>
+        </properties>
       </component>
     </children>
   </grid>
@@ -217,12 +273,19 @@
     <group name="buttonGroup1">
       <member id="d06cf"/>
       <member id="a8fd6"/>
-      <member id="6fe92"/>
       <member id="fb3a6"/>
     </group>
     <group name="eligeConOSin">
       <member id="3f0ee"/>
       <member id="4fbe5"/>
+    </group>
+    <group name="buttonTipoHelado">
+      <member id="a4826"/>
+      <member id="98754"/>
+    </group>
+    <group name="buttonAzucar">
+      <member id="3367c"/>
+      <member id="3b8c9"/>
     </group>
   </buttonGroups>
 </form>

@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b09e2ff6-5c9b-437d-8fa4-5df2f1d91efd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jgoodies_common_1_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/LGoodDatePicker-10.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/jgoodies-common-1.8.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/jgoodies-forms-1.8.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Práctica Heladería.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Práctica Heladería.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/Principal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/base/Helado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/base/Helado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/base/HeladoCono.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/base/HeladoCono.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/base/HeladoTarrina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/base/HeladoTarrina.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoControlador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoModelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoModelo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.java" afterDir="false" />
@@ -72,6 +66,26 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="Principal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.danielgib.practicaheladeria.Principal" />
+      <module name="Práctica Heladería" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.danielgib.practicaheladeria.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Principal" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -96,7 +110,10 @@
       <workItem from="1793084670401" duration="353000" />
       <workItem from="1793085358092" duration="30000" />
       <workItem from="1793092478004" duration="1708000" />
-      <workItem from="1793125471414" duration="4405000" />
+      <workItem from="1793125471414" duration="7582000" />
+      <workItem from="1793133180680" duration="68000" />
+      <workItem from="1793175687842" duration="5049000" />
+      <workItem from="1793259465865" duration="4756000" />
     </task>
     <servers />
   </component>

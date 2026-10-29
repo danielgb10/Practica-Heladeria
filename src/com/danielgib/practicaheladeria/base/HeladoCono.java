@@ -5,12 +5,12 @@ import java.time.LocalDate;
 public class HeladoCono extends Helado{
     public String tipoCono; //chocolate, barquillo...
 
-    public HeladoCono(String sabor, String toppings, LocalDate fechaCompra, double precio, String s, boolean sinAzucar, int numBolas, String tipoCono) {
+    public HeladoCono() {
         super();
     }
 
-    public HeladoCono(String sabor, String toppings, LocalDate fechaCompra, double precio, int stock, boolean sinAzucar, int numBolas, String tipoCono) {
-        super(sabor, toppings, fechaCompra, precio, stock, sinAzucar, numBolas);
+    public HeladoCono(String sabor, String toppings, LocalDate fechaCompra, double precio, boolean sinAzucar, int numBolas, String tipoCono) {
+        super(sabor, numBolas, toppings, fechaCompra, precio, sinAzucar);
         this.tipoCono = tipoCono;
     }
 
