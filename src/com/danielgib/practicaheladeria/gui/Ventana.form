@@ -62,7 +62,7 @@
           <text value="Azucar"/>
         </properties>
       </component>
-      <component id="71320" class="javax.swing.JButton" binding="nuevoHeladoButton" default-binding="true">
+      <component id="71320" class="javax.swing.JButton" binding="nuevoButton">
         <constraints>
           <grid row="16" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <forms/>

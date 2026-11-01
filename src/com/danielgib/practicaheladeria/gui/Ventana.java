@@ -7,7 +7,7 @@ import javax.swing.*;
 
 public class Ventana {
     public JPanel panel1;
-    public JButton nuevoHeladoButton;
+    public JButton nuevoButton;
     public JButton exportarButton;
     public JButton importarButton;
     public JList list1;

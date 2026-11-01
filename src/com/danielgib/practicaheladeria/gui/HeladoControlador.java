@@ -2,6 +2,7 @@ package com.danielgib.practicaheladeria.gui;
 
 import com.danielgib.practicaheladeria.base.Helado;
 
+import java.awt.event.ActionListener;
 import java.io.File;
 
 public class HeladoControlador {
@@ -37,6 +38,14 @@ public class HeladoControlador {
         for (Helado unHelado : modelo.obtenerHelados()) {
             vista.dlmHelado.addElement(unHelado);
         }
+    }
+
+    private void addActionListener(ActionListener listener) {
+        vista.nuevoButton.addActionListener(listener);
+        vista.exportarButton.addActionListener(listener);
+        vista.importarButton.addActionListener(listener);
+        vista.tarrinaRadioButton.addActionListener(listener);
+        vista.conoRadioButton.addActionListener(listener);
     }
 
 
