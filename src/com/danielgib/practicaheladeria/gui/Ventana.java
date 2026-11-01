@@ -22,6 +22,7 @@ public class Ventana {
     public JComboBox saborBox;
     public JTextArea textArea1;
     public JComboBox tamanoBox;
+    public JLabel tamanoLbl;
 
     public JFrame frame;
     public  DefaultListModel<Helado> dlmHelado;

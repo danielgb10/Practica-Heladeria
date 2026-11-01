@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b09e2ff6-5c9b-437d-8fa4-5df2f1d91efd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/gui/HeladoControlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/gui/HeladoControlador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/gui/HeladoModelo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/gui/HeladoModelo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/gui/Ventana.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/gui/Ventana.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoModelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoModelo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +117,7 @@
       <workItem from="1793259465865" duration="6247000" />
       <workItem from="1793294618892" duration="6149000" />
       <workItem from="1793346982668" duration="223000" />
-      <workItem from="1793558103655" duration="4324000" />
+      <workItem from="1793558103655" duration="5441000" />
     </task>
     <servers />
   </component>

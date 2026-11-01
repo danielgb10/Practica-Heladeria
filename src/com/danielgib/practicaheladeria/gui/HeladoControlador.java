@@ -1,10 +1,14 @@
 package com.danielgib.practicaheladeria.gui;
 
 import com.danielgib.practicaheladeria.base.Helado;
+import org.xml.sax.SAXException;
 import util.Util;
 
+import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
@@ -113,11 +117,42 @@ public class HeladoControlador implements ActionListener, ListSelectionListener,
                 limpiarCampos();
                 refrescar();
                 break;
-            case "Exportar":
-                break;
             case "Importar":
+                JFileChooser selectorFichero = Util.crearSelectorFichero(ultimaRutaExportacion, "Archivos XML", "xml");
+                int opt = selectorFichero.showOpenDialog(null);
+                if(opt == JFileChooser.APPROVE_OPTION) {
+                    try {
+                        modelo.importarXML(selectorFichero.getSelectedFile());
+                    } catch (ParserConfigurationException ex) {
+                        ex.printStackTrace();
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    } catch (SAXException ex) {
+                        ex.printStackTrace();
+                    }
+                    refrescar();
+                }
                 break;
-
+            case "Exportar":
+                JFileChooser selectorFichero2 = Util.crearSelectorFichero(ultimaRutaExportacion, "Archivos XML", "xml");
+                int opt2 = selectorFichero2.showSaveDialog(null);
+                if(opt2 == JFileChooser.APPROVE_OPTION) {
+                    try {
+                        modelo.exportarXML(selectorFichero2.getSelectedFile());
+                        actualizarDatosConfiguracion(selectorFichero2.getSelectedFile());
+                    } catch (ParserConfigurationException ex) {
+                        ex.printStackTrace();
+                    } catch (TransformerException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+                refrescar();
+                break;
+            case "Helado Tarrina":
+                vista.tamanoLbl.setText("Tamaño");
+                break;
+            case "Helado Cono":
+                vista.tamanoLbl.setText("Tipo Cono");
         }
     }
 
