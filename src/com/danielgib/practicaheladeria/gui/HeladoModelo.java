@@ -38,6 +38,15 @@ public class HeladoModelo {
         listaHelados.add(nuevoHeladoTarrina);
     }
 
+    public boolean existeSabor(String sabor) {
+        for (Helado unHelado : listaHelados) {
+            if(unHelado.getSabor().equals(sabor)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     //exportar
     public void exportarXML(File fichero) throws ParserConfigurationException, TransformerException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();

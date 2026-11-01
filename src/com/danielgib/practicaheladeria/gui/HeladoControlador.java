@@ -1,8 +1,8 @@
 package com.danielgib.practicaheladeria.gui;
 
 import com.danielgib.practicaheladeria.base.Helado;
+import util.Util;
 
-import javax.rmi.CORBA.Util;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.event.ActionEvent;
@@ -85,7 +85,33 @@ public class HeladoControlador implements ActionListener, ListSelectionListener,
 
         switch (actionCommand) {
             case "Nuevo":
+                if (hayCamposVacios()) {
+                    Util.mensajeError("Error: Los siguientes campos no pueden estar vacios: " +
+                            "n\tamaño\nsabor\numero bolas\ntoppings\nfecha compra\n" + vista.tamanoBox.getSelectedItem());
+                    break;
+                }
 
+                if(vista.tarrinaRadioButton.isSelected()) {
+                    modelo.altaHeladoTarrina(
+                            vista.saborBox.getSelectedItem().toString(),
+                            vista.toppingsTxt.getText(),
+                            vista.fechaCompraDatePicker.getDate(),
+                            Double.parseDouble(vista.fechaCompraDatePicker.getText()),
+                            Boolean.parseBoolean(vista.sinAzucarRadioButton.getText()),
+                            (int) vista.numBolasInt.getValue(),
+                            vista.tamanoBox.getSelectedItem().toString());
+                } else {
+                    modelo.altaHeladoCono(
+                            vista.saborBox.getSelectedItem().toString(),
+                            vista.toppingsTxt.getText(),
+                            vista.fechaCompraDatePicker.getDate(),
+                            Double.parseDouble(vista.fechaCompraDatePicker.getText()),
+                            Boolean.parseBoolean(vista.sinAzucarRadioButton.getText()),
+                            (int) vista.numBolasInt.getValue(),
+                            vista.tamanoBox.getSelectedItem().toString());
+                }
+                limpiarCampos();
+                refrescar();
                 break;
             case "Exportar":
                 break;
