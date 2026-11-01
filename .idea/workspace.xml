@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b09e2ff6-5c9b-437d-8fa4-5df2f1d91efd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/helados.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoControlador.java" afterDir="false" />
     </list>
@@ -112,7 +111,7 @@
       <workItem from="1793259465865" duration="6247000" />
       <workItem from="1793294618892" duration="6149000" />
       <workItem from="1793346982668" duration="223000" />
-      <workItem from="1793558103655" duration="682000" />
+      <workItem from="1793558103655" duration="988000" />
     </task>
     <servers />
   </component>

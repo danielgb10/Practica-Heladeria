@@ -8,10 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.Properties;
 
 public class HeladoControlador implements ActionListener, ListSelectionListener, WindowListener {
@@ -68,7 +65,17 @@ public class HeladoControlador implements ActionListener, ListSelectionListener,
     private void cargarDatosConfiguracion() throws IOException {
         Properties configuracion = new Properties();
         configuracion.load(new FileReader("helados.conf"));
-        ultimaRutaExportacion = new File(configuracion.getProperty("ultumaRutaExportada"));
+        ultimaRutaExportacion = new File(configuracion.getProperty("ultumaRutaExportacion"));
+    }
+
+    private void actualizarDatosConfiguracion(File ultimaRutaExportacion) {
+        this.ultimaRutaExportacion = ultimaRutaExportacion;
+    }
+
+    private void guardarDatosConfiguracion() throws IOException {
+        Properties configuracion = new Properties();
+        configuracion.setProperty("ultumaRutaExportacion", ultimaRutaExportacion.getAbsolutePath());
+        configuracion.store(new PrintWriter("helados.conf"), "Datos configuracion helados");
     }
 
     @Override
