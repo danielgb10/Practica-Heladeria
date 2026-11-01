@@ -2,6 +2,7 @@ package com.danielgib.practicaheladeria.gui;
 
 import com.danielgib.practicaheladeria.base.Helado;
 
+import javax.rmi.CORBA.Util;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.event.ActionEvent;
@@ -80,7 +81,18 @@ public class HeladoControlador implements ActionListener, ListSelectionListener,
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        String actionCommand = e.getActionCommand();
 
+        switch (actionCommand) {
+            case "Nuevo":
+
+                break;
+            case "Exportar":
+                break;
+            case "Importar":
+                break;
+
+        }
     }
 
     @Override
