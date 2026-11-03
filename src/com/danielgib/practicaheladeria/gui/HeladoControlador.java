@@ -28,7 +28,9 @@ public class HeladoControlador implements ActionListener, ListSelectionListener,
         this.modelo = modelo;
         try {
             cargarDatosConfiguracion();
+            precioAleatorio();
             max3Bolas();
+
         } catch (IOException e) {
             System.out.println("No se encontro el archivo " + e.getMessage());
         }
@@ -73,6 +75,8 @@ public class HeladoControlador implements ActionListener, ListSelectionListener,
         vista.importarButton.addActionListener(listener);
         vista.tarrinaRadioButton.addActionListener(listener);
         vista.conoRadioButton.addActionListener(listener);
+        vista.editarButton.addActionListener(listener);
+        vista.eliminarButton.addActionListener(listener);
     }
 
     private void addListSelectionListener(ListSelectionListener listener) {
@@ -188,16 +192,59 @@ public class HeladoControlador implements ActionListener, ListSelectionListener,
                 vista.tamanoBox.addItem("Chocolate");
                 vista.tamanoBox.addItem("Galleta");
                 vista.tamanoBox.addItem("Barquillo");
+                break;
 
+            case "Editar":
+                int posicion = vista.list1.getSelectedIndex();
+
+                if (posicion < 0) {
+                    Util.mensajeError("Porfavor, seleccione un Tipo de Helado");
+                    break;
+                }
+
+                Helado modificar;
+                if(vista.tarrinaRadioButton.isSelected()) {
+                    modificar = new HeladoTarrina(vista.tamanoBox.getSelectedItem().toString(),
+                            vista.saborBox.getSelectedItem().toString(),
+                            Integer.parseInt(vista.numBolasInt.getValue().toString()),
+                            vista.toppingsTxt.getText(),
+                            vista.fechaCompraDatePicker.getDate(),
+                            Integer.parseInt(vista.precioTxt.getText()),
+                            vista.conAzucarRadioButton.isSelected());
+                            vista.sinAzucarRadioButton.isSelected();
+                } else {
+                    modificar = new HeladoCono(vista.tamanoBox.getSelectedItem().toString(),
+                            vista.saborBox.getSelectedItem().toString(),
+                            Integer.parseInt(vista.numBolasInt.getValue().toString()),
+                            vista.toppingsTxt.getText(),
+                            vista.fechaCompraDatePicker.getDate(),
+                            Integer.parseInt(vista.precioTxt.getText()),
+                            vista.conAzucarRadioButton.isSelected());
+                    vista.sinAzucarRadioButton.isSelected();
+                }
+                modelo.editarHelado(posicion, modificar);
+                refrescar();
+                break;
+
+            case "Eliminar":
+                    Helado eliminar = (Helado) vista.list1.getSelectedValue();
+
+                    if(eliminar == null) {
+                        Util.mensajeError("Porfavor, elige un helado");
+                        break;
+                    }
+
+                    modelo.eliminarHelado(eliminar);
+                    limpiarCampos();
+                    refrescar();
                 break;
         }
-        refrescar();
     }
 
     @Override
     public void windowClosing(WindowEvent e) {
-        int resp = Util.mensajeConfirmacion("¿Deseas cerrar la ventana?", "Salir");
-        if(resp == JOptionPane.OK_OPTION) {
+        int resp = Util.mensajeConfirmacion("¿Deseas cerrar la ventana?","Salir");
+        if (resp == JOptionPane.OK_OPTION) {
             try {
                 guardarDatosConfiguracion();
             } catch (IOException ex) {

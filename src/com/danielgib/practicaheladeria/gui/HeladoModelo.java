@@ -167,7 +167,17 @@ public class HeladoModelo {
                     listaHelados.add(nuevoHeladoCono);
                 }
             }
+
+
         }
+    }
+
+    public void editarHelado(int posicion, Helado modificar) {
+        listaHelados.set(posicion, modificar);
+    }
+
+    public void eliminarHelado(Helado eliminar) {
+        listaHelados.remove(eliminar);
     }
 }
 

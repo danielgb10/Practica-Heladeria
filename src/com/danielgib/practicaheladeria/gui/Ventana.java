@@ -23,16 +23,19 @@ public class Ventana {
     public JTextArea observaciones;
     public JComboBox tamanoBox;
     public JLabel tamanoLbl;
-    private JLabel imagenLbl;
+    public JButton editarButton;
+    public JButton eliminarButton;
 
     public JFrame frame;
     public  DefaultListModel<Helado> dlmHelado;
 
     public Ventana() {
-        frame = new JFrame("Ventana");
+        frame = new JFrame("Heladeria");
         frame.setContentPane(panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
+        frame.setLocationRelativeTo(null);
+
         frame.setVisible(true);
         initComponents();
     }
