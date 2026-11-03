@@ -9,8 +9,8 @@ public class HeladoTarrina extends Helado {
         super();
     }
 
-    public HeladoTarrina(String sabor, String toppings, LocalDate fechaCompra, double precio, boolean sinAzucar, int numBolas, String tamano) {
-        super(sabor, numBolas, toppings, fechaCompra, precio, sinAzucar);
+    public HeladoTarrina(String tamano, String sabor, int numBolas, String toppings, LocalDate fechaCompra, int precio, boolean azucar) {
+        super(sabor, numBolas, toppings, fechaCompra, precio, azucar);
         this.tamano = tamano;
     }
 
@@ -24,6 +24,7 @@ public class HeladoTarrina extends Helado {
 
     @Override
     public String toString() {
-        return "Tamaño: " + tamano ;
+        return "Tarrina - " + getTamano() + " (" + getSabor() + ", " + getToppings() + ")" + " - " + getPrecio() + "€";
+
     }
 }

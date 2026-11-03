@@ -8,20 +8,20 @@ public abstract class Helado {
     private int numBolas;
     private String toppings;
     private LocalDate fechaCompra;
-    private double precio;
-    private boolean sinAzucar;
+    private int precio;
+    private boolean azucar;
 
     public Helado() {
 
     }
 
-    public Helado(String sabor, int numBolas, String toppings, LocalDate fechaCompra, double precio, boolean sinAzucar) {
+    public Helado(String sabor, int numBolas, String toppings, LocalDate fechaCompra, int precio, boolean azucar) {
         this.sabor = sabor;
         this.numBolas = numBolas;
         this.toppings = toppings;
         this.fechaCompra = fechaCompra;
         this.precio = precio;
-        this.sinAzucar = sinAzucar;
+        this.azucar = azucar;
     }
 
     public String getSabor() {
@@ -56,19 +56,19 @@ public abstract class Helado {
         this.fechaCompra = fechaCompra;
     }
 
-    public double getPrecio() {
+    public int getPrecio() {
         return precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(int precio) {
         this.precio = precio;
     }
 
-    public boolean isSinAzucar() {
-        return sinAzucar;
+    public boolean getAzucar() {
+        return azucar;
     }
 
-    public void setSinAzucar(boolean sinAzucar) {
-        this.sinAzucar = sinAzucar;
+    public void setAzucar(boolean azucar) {
+        this.azucar = azucar;
     }
 }

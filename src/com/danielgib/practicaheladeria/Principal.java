@@ -1,6 +1,5 @@
 package com.danielgib.practicaheladeria;
 
-
 import com.danielgib.practicaheladeria.gui.HeladoControlador;
 import com.danielgib.practicaheladeria.gui.HeladoModelo;
 import com.danielgib.practicaheladeria.gui.Ventana;

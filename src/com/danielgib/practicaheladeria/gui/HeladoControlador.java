@@ -1,6 +1,8 @@
 package com.danielgib.practicaheladeria.gui;
 
 import com.danielgib.practicaheladeria.base.Helado;
+import com.danielgib.practicaheladeria.base.HeladoCono;
+import com.danielgib.practicaheladeria.base.HeladoTarrina;
 import org.xml.sax.SAXException;
 import util.Util;
 
@@ -19,29 +21,43 @@ import java.util.Properties;
 public class HeladoControlador implements ActionListener, ListSelectionListener, WindowListener {
     private Ventana vista;
     private HeladoModelo modelo;
-    private  File ultimaRutaExportacion;
+    private  File ultimaRutaExportada;
 
     public HeladoControlador(Ventana vista, HeladoModelo modelo) {
         this.vista = vista;
         this.modelo = modelo;
+        try {
+            cargarDatosConfiguracion();
+            max3Bolas();
+        } catch (IOException e) {
+            System.out.println("No se encontro el archivo " + e.getMessage());
+        }
+        addActionListener(this);
+        addListSelectionListener(this);
+        addWindowListener(this);
     }
 
     private boolean hayCamposVacios() {
-        if(vista.tamanoBox.getSelectedItem().equals("") ||  //corregir
+        if (vista.tamanoBox.getSelectedIndex() == -1 ||
                 vista.toppingsTxt.getText().isEmpty() ||
                 vista.fechaCompraDatePicker.getText().isEmpty() ||
-                vista.precioTxt.getText().isEmpty() ||
-                vista.conAzucarRadioButton.getText().isEmpty() ||
-                vista.sinAzucarRadioButton.getText().isEmpty()) {
+                vista.precioTxt.getText().isEmpty()) {
+
             return true;
         }
+
         return false;
     }
 
     private void limpiarCampos() {
+        vista.tamanoBox.setSelectedIndex(0);
+        vista.saborBox.setSelectedIndex(0);
+        vista.numBolasInt.setValue(0);
         vista.toppingsTxt.setText(null);
         vista.fechaCompraDatePicker.setText(null);
         vista.precioTxt.setText(null);
+        vista.conAzucarRadioButton.doClick(0);
+        vista.sinAzucarRadioButton.doClick(0);
     }
 
     public void refrescar() {
@@ -70,17 +86,17 @@ public class HeladoControlador implements ActionListener, ListSelectionListener,
     private void cargarDatosConfiguracion() throws IOException {
         Properties configuracion = new Properties();
         configuracion.load(new FileReader("helados.conf"));
-        ultimaRutaExportacion = new File(configuracion.getProperty("ultumaRutaExportacion"));
+        ultimaRutaExportada = new File(configuracion.getProperty("ultimaRutaExportada"));
     }
 
-    private void actualizarDatosConfiguracion(File ultimaRutaExportacion) {
-        this.ultimaRutaExportacion = ultimaRutaExportacion;
+    private void actualizarDatosConfiguracion(File ultimaRutaExportada) {
+        this.ultimaRutaExportada = ultimaRutaExportada;
     }
 
     private void guardarDatosConfiguracion() throws IOException {
         Properties configuracion = new Properties();
-        configuracion.setProperty("ultumaRutaExportacion", ultimaRutaExportacion.getAbsolutePath());
-        configuracion.store(new PrintWriter("helados.conf"), "Datos configuracion helados");
+        configuracion.setProperty("ultimaRutaExportada", ultimaRutaExportada.getAbsolutePath());
+        configuracion.store(new PrintWriter("helados.conf"),"Datos configuracion helados");
     }
 
     @Override
@@ -88,37 +104,45 @@ public class HeladoControlador implements ActionListener, ListSelectionListener,
         String actionCommand = e.getActionCommand();
 
         switch (actionCommand) {
-            case "Nuevo":
+            case "Nuevo Helado":
                 if (hayCamposVacios()) {
-                    Util.mensajeError("Error: Los siguientes campos no pueden estar vacios: " +
-                            "n\tamaño\nsabor\numero bolas\ntoppings\nfecha compra\n" + vista.tamanoBox.getSelectedItem());
+                    Util.mensajeError("Error: Los siguientes campos no pueden " +
+                            "estar vacios:\n" + vista.tamanoLbl.getText() + "\nSabor\nNumero Bolas\nToppings" +
+                            "\nFecha Compra\n");
+                    break;
+                }
+
+                if(modelo.existeSabor(vista.saborBox.getSelectedItem().toString())) {
+                    Util.mensajeError("Ya existe un helado con ese sabor");
                     break;
                 }
 
                 if(vista.tarrinaRadioButton.isSelected()) {
                     modelo.altaHeladoTarrina(
+                            vista.tamanoBox.getSelectedItem().toString(),
                             vista.saborBox.getSelectedItem().toString(),
+                            Integer.parseInt(vista.numBolasInt.getValue().toString()),
                             vista.toppingsTxt.getText(),
                             vista.fechaCompraDatePicker.getDate(),
-                            Double.parseDouble(vista.fechaCompraDatePicker.getText()),
-                            Boolean.parseBoolean(vista.sinAzucarRadioButton.getText()),
-                            (int) vista.numBolasInt.getValue(),
-                            vista.tamanoBox.getSelectedItem().toString());
+                            Integer.parseInt(vista.precioTxt.getText()),
+                            vista.conAzucarRadioButton.isSelected());
+                            vista.sinAzucarRadioButton.isSelected();
+
                 } else {
                     modelo.altaHeladoCono(
+                            vista.tamanoBox.getSelectedItem().toString(),
                             vista.saborBox.getSelectedItem().toString(),
+                            Integer.parseInt(vista.numBolasInt.getValue().toString()),
                             vista.toppingsTxt.getText(),
                             vista.fechaCompraDatePicker.getDate(),
-                            Double.parseDouble(vista.fechaCompraDatePicker.getText()),
-                            Boolean.parseBoolean(vista.sinAzucarRadioButton.getText()),
-                            (int) vista.numBolasInt.getValue(),
-                            vista.tamanoBox.getSelectedItem().toString());
-                }
+                            Integer.parseInt(vista.precioTxt.getText()),
+                            vista.conAzucarRadioButton.isSelected());
+                    }
                 limpiarCampos();
                 refrescar();
                 break;
             case "Importar":
-                JFileChooser selectorFichero = Util.crearSelectorFichero(ultimaRutaExportacion, "Archivos XML", "xml");
+                JFileChooser selectorFichero = Util.crearSelectorFichero(ultimaRutaExportada, "Archivos XML", "xml");
                 int opt = selectorFichero.showOpenDialog(null);
                 if(opt == JFileChooser.APPROVE_OPTION) {
                     try {
@@ -134,7 +158,7 @@ public class HeladoControlador implements ActionListener, ListSelectionListener,
                 }
                 break;
             case "Exportar":
-                JFileChooser selectorFichero2 = Util.crearSelectorFichero(ultimaRutaExportacion, "Archivos XML", "xml");
+                JFileChooser selectorFichero2 = Util.crearSelectorFichero(ultimaRutaExportada, "Archivos XML", "xml");
                 int opt2 = selectorFichero2.showSaveDialog(null);
                 if(opt2 == JFileChooser.APPROVE_OPTION) {
                     try {
@@ -148,26 +172,78 @@ public class HeladoControlador implements ActionListener, ListSelectionListener,
                 }
                 refrescar();
                 break;
-            case "Helado Tarrina":
+            case "Tarrina":
                 vista.tamanoLbl.setText("Tamaño");
+                vista.tamanoBox.removeAllItems();
+                vista.tamanoBox.addItem("");
+                vista.tamanoBox.addItem("Pequeño");
+                vista.tamanoBox.addItem("Mediano");
+                vista.tamanoBox.addItem("Grande");
                 break;
-            case "Helado Cono":
+
+            case "Cono":
                 vista.tamanoLbl.setText("Tipo Cono");
+                vista.tamanoBox.removeAllItems();
+                vista.tamanoBox.addItem("");
+                vista.tamanoBox.addItem("Chocolate");
+                vista.tamanoBox.addItem("Galleta");
+                vista.tamanoBox.addItem("Barquillo");
+
+                break;
+        }
+        refrescar();
+    }
+
+    @Override
+    public void windowClosing(WindowEvent e) {
+        int resp = Util.mensajeConfirmacion("¿Deseas cerrar la ventana?", "Salir");
+        if(resp == JOptionPane.OK_OPTION) {
+            try {
+                guardarDatosConfiguracion();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+            System.exit(0);
         }
     }
 
     @Override
     public void valueChanged(ListSelectionEvent e) {
+        if(e.getValueIsAdjusting()) {
+            Helado heladoSeleccionado = (Helado) vista.list1.getSelectedValue();
 
+            if (heladoSeleccionado == null) {
+                return;
+            }
+
+            vista.saborBox.setSelectedItem(heladoSeleccionado.getSabor());
+            vista.numBolasInt.setValue(heladoSeleccionado.getNumBolas());
+            vista.toppingsTxt.setText(heladoSeleccionado.getToppings());
+            vista.fechaCompraDatePicker.setDate(heladoSeleccionado.getFechaCompra());
+            vista.precioTxt.setText(String.valueOf(heladoSeleccionado.getPrecio()));
+
+            if(heladoSeleccionado instanceof HeladoTarrina) {
+                vista.tarrinaRadioButton.doClick();
+                vista.tamanoBox.setSelectedItem(String.valueOf(((HeladoTarrina) heladoSeleccionado).getTamano()));
+            } else if (heladoSeleccionado instanceof HeladoCono){
+                vista.conoRadioButton.doClick();
+                vista.tamanoBox.setSelectedItem(String.valueOf(((HeladoCono) heladoSeleccionado).getTipoCono()));
+            }
+        }
     }
+
+    public void precioAleatorio() {
+        int numero = (int) (Math.random() *10);
+        vista.precioTxt.setText(String.valueOf(numero));
+    }
+
+    private void max3Bolas() {
+        vista.numBolasInt.setModel(new SpinnerNumberModel(1, 1, 3, 1));
+    }
+
 
     @Override
     public void windowOpened(WindowEvent e) {
-
-    }
-
-    @Override
-    public void windowClosing(WindowEvent e) {
 
     }
 

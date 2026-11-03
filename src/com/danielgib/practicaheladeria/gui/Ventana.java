@@ -20,9 +20,10 @@ public class Ventana {
     public JRadioButton conAzucarRadioButton;
     public JRadioButton sinAzucarRadioButton;
     public JComboBox saborBox;
-    public JTextArea textArea1;
+    public JTextArea observaciones;
     public JComboBox tamanoBox;
     public JLabel tamanoLbl;
+    private JLabel imagenLbl;
 
     public JFrame frame;
     public  DefaultListModel<Helado> dlmHelado;
@@ -39,6 +40,13 @@ public class Ventana {
     public void initComponents() {
         dlmHelado = new DefaultListModel<Helado>();
         list1.setModel(dlmHelado);
+
+        saborBox.addItem("Chocolate");
+        saborBox.addItem("Fresa");
+        saborBox.addItem("Vainilla");
+        saborBox.addItem("Limón");
+        saborBox.addItem("Pistacho");
+        saborBox.setSelectedIndex(-1);
     }
 
 

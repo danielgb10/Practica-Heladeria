@@ -28,13 +28,13 @@ public class HeladoModelo {
         return listaHelados;
     }
 
-    public void altaHeladoCono(String sabor, String toppings, LocalDate fechaCompra, double precio, boolean sinAzucar, int numBolas, String tipoCono) {
-        HeladoCono nuevoHeladoCono = new HeladoCono(sabor, toppings, fechaCompra, precio, sinAzucar, numBolas, tipoCono);
+    public void altaHeladoCono(String tipoCono, String sabor, int numBolas, String toppings, LocalDate fechaCompra, int precio, boolean azucar) {
+        HeladoCono nuevoHeladoCono = new HeladoCono(tipoCono, sabor, numBolas, toppings, fechaCompra, precio, azucar);
         listaHelados.add(nuevoHeladoCono);
     }
 
-    public void altaHeladoTarrina(String sabor, String toppings, LocalDate fechaCompra, double precio, boolean sinAzucar, int numBolas, String tamano) {
-        HeladoTarrina nuevoHeladoTarrina = new HeladoTarrina(sabor, toppings, fechaCompra, precio, sinAzucar, numBolas, tamano);
+    public void altaHeladoTarrina(String tamano,String sabor, int numBolas, String toppings, LocalDate fechaCompra, int precio, boolean azucar) {
+        HeladoTarrina nuevoHeladoTarrina = new HeladoTarrina(tamano, sabor, numBolas, toppings, fechaCompra, precio, azucar);
         listaHelados.add(nuevoHeladoTarrina);
     }
 
@@ -54,6 +54,7 @@ public class HeladoModelo {
         DOMImplementation dom = builder.getDOMImplementation();
         Document documento = dom.createDocument(null, "xml", null);
 
+        //nodo raiz
         Element raiz = documento.createElement("helado");
         documento.getDocumentElement().appendChild(raiz);
 
@@ -64,11 +65,11 @@ public class HeladoModelo {
 
         for (Helado unHelado : listaHelados) {
             if(unHelado instanceof HeladoTarrina) {
-                nodoHelados = documento.createElement("Helado Tarrina");
-            } else {
-                nodoHelados = documento.createElement("Helado Cono");
+                nodoHelados = documento.createElement("HeladoTarrina");
+            } else if(unHelado instanceof  HeladoCono) {
+                nodoHelados = documento.createElement("HeladoCono");
             }
-            raiz.appendChild(nodoDatos);
+            raiz.appendChild(nodoHelados);
 
             //dentro de la etiqueta helado
             nodoDatos = documento.createElement("sabor");
@@ -81,7 +82,7 @@ public class HeladoModelo {
             texto = documento.createTextNode(String.valueOf(unHelado.getNumBolas()));
             nodoDatos.appendChild(texto);
 
-            nodoDatos = documento.createElement("topppings");
+            nodoDatos = documento.createElement("toppings");
             nodoHelados.appendChild(nodoDatos);
             texto = documento.createTextNode(unHelado.getToppings());
             nodoDatos.appendChild(texto);
@@ -96,9 +97,9 @@ public class HeladoModelo {
             texto = documento.createTextNode(String.valueOf(unHelado.getPrecio()));
             nodoDatos.appendChild(texto);
 
-            nodoDatos = documento.createElement("sinAzucar");
+            nodoDatos = documento.createElement("azucar");
             nodoHelados.appendChild(nodoDatos);
-            texto = documento.createTextNode(String.valueOf(unHelado.isSinAzucar()));
+            texto = documento.createTextNode(String.valueOf(unHelado.getAzucar()));
             nodoDatos.appendChild(texto);
 
             //ponemoss los atributos diferentes
@@ -108,8 +109,8 @@ public class HeladoModelo {
                 texto = documento.createTextNode(((HeladoTarrina) unHelado).getTamano());
                 nodoDatos.appendChild(texto);
             } else if(unHelado instanceof HeladoCono) {
-                nodoDatos = documento.createElement("tipocono");
-                nodoDatos.appendChild(nodoDatos);
+                nodoDatos = documento.createElement("tipoCono");
+                nodoHelados.appendChild(nodoDatos);
                 texto = documento.createTextNode(((HeladoCono) unHelado).getTipoCono());
                 nodoDatos.appendChild(texto);
             }
@@ -133,34 +134,41 @@ public class HeladoModelo {
         Document documento = builder.parse(fichero);
 
         //recorrer los archivos
-        NodeList listaElementos = documento.getElementsByTagName("");
+        NodeList listaElementos = documento.getElementsByTagName("*");
         for (int i=0; i<listaElementos.getLength(); i++) {
             Element nodoHelado = (Element) listaElementos.item(i);
 
             if(nodoHelado.getTagName().equals("HeladoTarrina")) {
                 nuevoHeladoTarrina = new HeladoTarrina();
-                nuevoHeladoTarrina.setTamano(nodoHelado.getChildNodes().item(0).getTextContent());
-                nuevoHeladoTarrina.setSabor(nodoHelado.getChildNodes().item(1).getTextContent());
-                nuevoHeladoTarrina.setNumBolas(Integer.parseInt(nodoHelado.getChildNodes().item(2).getTextContent()));
-                nuevoHeladoTarrina.setToppings(nodoHelado.getChildNodes().item(3).getTextContent());
-                nuevoHeladoTarrina.setFechaCompra(LocalDate.parse(nodoHelado.getChildNodes().item(4).getTextContent()));
-                nuevoHeladoTarrina.setPrecio(Double.parseDouble(nodoHelado.getChildNodes().item(5).getTextContent()));
-                nuevoHeladoTarrina.setSinAzucar(Boolean.parseBoolean(nodoHelado.getChildNodes().item(6).getTextContent()));
+
+
+                nuevoHeladoTarrina.setSabor(nodoHelado.getChildNodes().item(0).getTextContent());
+                nuevoHeladoTarrina.setNumBolas(Integer.parseInt(nodoHelado.getChildNodes().item(1).getTextContent()));
+                nuevoHeladoTarrina.setToppings(nodoHelado.getChildNodes().item(2).getTextContent());
+                nuevoHeladoTarrina.setFechaCompra(LocalDate.parse(nodoHelado.getChildNodes().item(3).getTextContent()));
+                nuevoHeladoTarrina.setPrecio(Integer.parseInt(nodoHelado.getChildNodes().item(4).getTextContent()));
+                nuevoHeladoTarrina.setAzucar(Boolean.parseBoolean(nodoHelado.getChildNodes().item(5).getTextContent()));
+                nuevoHeladoTarrina.setTamano(nodoHelado.getChildNodes().item(6).getTextContent());
+
                 listaHelados.add(nuevoHeladoTarrina);
 
-            } else if(nodoHelado.getTagName().equals("HeladoCono")) {
-                nuevoHeladoCono = new HeladoCono();
-                nuevoHeladoCono.setTipoCono(nodoHelado.getChildNodes().item(0).getTextContent());
-                nuevoHeladoCono.setSabor(nodoHelado.getChildNodes().item(1).getTextContent());
-                nuevoHeladoCono.setNumBolas(Integer.parseInt(nodoHelado.getChildNodes().item(2).getTextContent()));
-                nuevoHeladoCono.setToppings(nodoHelado.getChildNodes().item(3).getTextContent());
-                nuevoHeladoCono.setFechaCompra(LocalDate.parse(nodoHelado.getChildNodes().item(4).getTextContent()));
-                nuevoHeladoCono.setPrecio(Double.parseDouble(nodoHelado.getChildNodes().item(5).getTextContent()));
-                nuevoHeladoCono.setSinAzucar(Boolean.parseBoolean(nodoHelado.getChildNodes().item(6).getTextContent()));
-                listaHelados.add(nuevoHeladoCono);
+            } else {
+                if(nodoHelado.getTagName().equals("HeladoCono")) {
+                    nuevoHeladoCono = new HeladoCono();
+
+                    nuevoHeladoTarrina.setSabor(nodoHelado.getChildNodes().item(0).getTextContent());
+                    nuevoHeladoTarrina.setNumBolas(Integer.parseInt(nodoHelado.getChildNodes().item(1).getTextContent()));
+                    nuevoHeladoTarrina.setToppings(nodoHelado.getChildNodes().item(2).getTextContent());
+                    nuevoHeladoTarrina.setFechaCompra(LocalDate.parse(nodoHelado.getChildNodes().item(3).getTextContent()));
+                    nuevoHeladoTarrina.setPrecio(Integer.parseInt(nodoHelado.getChildNodes().item(4).getTextContent()));
+                    nuevoHeladoTarrina.setAzucar(Boolean.parseBoolean(nodoHelado.getChildNodes().item(5).getTextContent()));
+                    nuevoHeladoCono.setTipoCono(nodoHelado.getChildNodes().item(6).getTextContent());
+
+                    listaHelados.add(nuevoHeladoCono);
+                }
             }
         }
     }
-    }
+}
 
 

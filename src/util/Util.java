@@ -14,14 +14,14 @@ public class Util {
     }
 
     public static JFileChooser crearSelectorFichero(File rutaDefecto, String tipoArchivos, String extension) {
-            JFileChooser selectorFichero = new JFileChooser();
-            if(rutaDefecto != null) {
-                selectorFichero.setCurrentDirectory(rutaDefecto);
-            }
-            if(extension != null) {
-                FileNameExtensionFilter filtro = new FileNameExtensionFilter(tipoArchivos, extension);
-                selectorFichero.setFileFilter(filtro);
-            }
-            return selectorFichero;
+        JFileChooser selectorFichero = new JFileChooser();
+        if(rutaDefecto != null) {
+            selectorFichero.setCurrentDirectory(rutaDefecto);
+        }
+        if(extension != null) {
+            FileNameExtensionFilter filtro = new FileNameExtensionFilter(tipoArchivos, extension);
+            selectorFichero.setFileFilter(filtro);
+        }
+        return selectorFichero;
     }
 }
