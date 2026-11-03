@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Práctica Heladería:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b09e2ff6-5c9b-437d-8fa4-5df2f1d91efd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Práctica_Heladería_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helados.conf" beforeDir="false" afterPath="$PROJECT_DIR$/helados.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/gui/HeladoControlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/gui/HeladoControlador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/gui/HeladoModelo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/gui/HeladoModelo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/gui/Ventana.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Práctica Heladería/com/danielgib/practicaheladeria/gui/Ventana.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoModelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/HeladoModelo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/danielgib/practicaheladeria/gui/Ventana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Práctica Heladería/imagenes/Copa de helado multicolor con toppings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Práctica Heladería/imagenes/helado.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +47,10 @@
   <component name="ProjectId" id="3L2Zp5NvOLX4hDmKrMMKBV31MsT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="práctica_heladería" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="false" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE" value="right" />
@@ -63,7 +68,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.14550781" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
@@ -150,7 +155,9 @@
       <workItem from="1793720670766" duration="2815000" />
       <workItem from="1793723553524" duration="9016000" />
       <workItem from="1793732673330" duration="399000" />
-      <workItem from="1793733084978" duration="277000" />
+      <workItem from="1793733084978" duration="1398000" />
+      <workItem from="1793734505356" duration="46000" />
+      <workItem from="1793734558371" duration="416000" />
     </task>
     <servers />
   </component>
