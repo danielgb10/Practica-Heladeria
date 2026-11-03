@@ -156,12 +156,12 @@ public class HeladoModelo {
                 if(nodoHelado.getTagName().equals("HeladoCono")) {
                     nuevoHeladoCono = new HeladoCono();
 
-                    nuevoHeladoTarrina.setSabor(nodoHelado.getChildNodes().item(0).getTextContent());
-                    nuevoHeladoTarrina.setNumBolas(Integer.parseInt(nodoHelado.getChildNodes().item(1).getTextContent()));
-                    nuevoHeladoTarrina.setToppings(nodoHelado.getChildNodes().item(2).getTextContent());
-                    nuevoHeladoTarrina.setFechaCompra(LocalDate.parse(nodoHelado.getChildNodes().item(3).getTextContent()));
-                    nuevoHeladoTarrina.setPrecio(Integer.parseInt(nodoHelado.getChildNodes().item(4).getTextContent()));
-                    nuevoHeladoTarrina.setAzucar(Boolean.parseBoolean(nodoHelado.getChildNodes().item(5).getTextContent()));
+                    nuevoHeladoCono.setSabor(nodoHelado.getChildNodes().item(0).getTextContent());
+                    nuevoHeladoCono.setNumBolas(Integer.parseInt(nodoHelado.getChildNodes().item(1).getTextContent()));
+                    nuevoHeladoCono.setToppings(nodoHelado.getChildNodes().item(2).getTextContent());
+                    nuevoHeladoCono.setFechaCompra(LocalDate.parse(nodoHelado.getChildNodes().item(3).getTextContent()));
+                    nuevoHeladoCono.setPrecio(Integer.parseInt(nodoHelado.getChildNodes().item(4).getTextContent()));
+                    nuevoHeladoCono.setAzucar(Boolean.parseBoolean(nodoHelado.getChildNodes().item(5).getTextContent()));
                     nuevoHeladoCono.setTipoCono(nodoHelado.getChildNodes().item(6).getTextContent());
 
                     listaHelados.add(nuevoHeladoCono);
